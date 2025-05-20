@@ -26,7 +26,7 @@ const App = () => {
 const Child = ({handelshowmodal ,showModal})=>{
   return (
     <>
-    <h2>Child component</h2>
+    <h2>Child Component</h2>
     <button onClick={handelshowmodal}>Show Modal</button>
 
 {
