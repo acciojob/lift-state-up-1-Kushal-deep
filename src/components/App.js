@@ -5,10 +5,10 @@ import './../styles/App.css';
 const App = () => {
 
 
-  const [showmodel,setShowmodel]=useState(false)
+  const [showModal,setShowmodal]=useState(false)
 
-  const handelshowmodel=()=>{
-    setShowmodel(true)
+  const handelshowmodal=()=>{
+    setShowmodal(true)
   }
 
   return (
@@ -16,24 +16,24 @@ const App = () => {
         {/* Do not remove the main div */}
         <div className="parent">
           <h1>Parent Component</h1>
-          <Child handelshowmodel={handelshowmodel} showmodel={showmodel}/>
+          <Child handelshowmodal={handelshowmodal} showModal={showModal}/>
         </div>
 
     </div>
   )
 }
 
-const Child = ({handelshowmodel ,showmodel})=>{
+const Child = ({handelshowmodal ,showModal})=>{
   return (
     <>
     <h2>Child component</h2>
-    <button onClick={handelshowmodel}>show model</button>
+    <button onClick={handelshowmodal}>Show Modal</button>
 
 {
-  showmodel &&(  
+  showModal &&(  
     <div>
-  <h3>Model Content</h3>
-  <p>This is the model content.</p>
+  <h3>Modal Content</h3>
+  <p>This is the modal content.</p>
   </div>
 
   )}
